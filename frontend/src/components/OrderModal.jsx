@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const initialForm = {
   userName: '',
@@ -56,7 +57,7 @@ export default function OrderModal({ isOpen, onClose }) {
     };
 
     try {
-      const response = await fetch('/api/order', {
+      const response = await fetch(`${API_URL}/api/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
