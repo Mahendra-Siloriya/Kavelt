@@ -1,17 +1,17 @@
 
 const qualityFeatures = [
   {
-    icon: '/assets/Quality_image/11.png',
-    alt: '11-Stage Purification',
+    icon: '/assets/Quality_image/5_stage.jpg',
+    alt: '5-Stage Purification',
     width: 73,
     height: 56,
     title: '5-Stage Purification',
     description:
-      'Every drop passes through an advanced 11-stage purification process, including multi-media filtration, reverse osmosis, ozonation, and UV sterilization for safe and consistent drinking water.',
+      'Every drop passes through an advanced 5-stage purification process, including multi-media filtration, reverse osmosis, ozonation, and UV sterilization for safe and consistent drinking water.',
   },
   {
-    icon: '/assets/Quality_image/2.png',
-    alt: '121 Quality Checks',
+    icon: '/assets/Quality_image/quality_check.jpg',
+    alt: '20+ Quality Checks',
     width: 50,
     height: 63,
     title: '20+ Quality Checks',
@@ -19,7 +19,7 @@ const qualityFeatures = [
       'Each batch undergoes 20+ rigorous quality checks across our manufacturing and laboratory systems to ensure the same trusted standard in every bottle.',
   },
   {
-    icon: '/assets/Quality_image/3.png',
+    icon: '/assets/Quality_image/quality_check.jpg',
     alt: 'Zero Discharge',
     width: 60,
     height: 60,
@@ -28,7 +28,7 @@ const qualityFeatures = [
       'Our zero-discharge facilities recover, treat, and reuse process water, helping reduce environmental impact and support responsible manufacturing.',
   },
   {
-    icon: '/assets/Quality_image/4.png',
+    icon: '/assets/Quality_image/Intergrated_operation.jpg',
     alt: 'Integrated Operations',
     width: 60,
     height: 60,
@@ -37,7 +37,7 @@ const qualityFeatures = [
       'From preform moulding to filling and packaging, our integrated operations ensure complete quality control and supply consistency.',
   },
   {
-    icon: '/assets/Quality_image/5.png',
+    icon: '/assets/Quality_image/Green_manufacturing.jpg',
     alt: 'Green Manufacturing',
     width: 60,
     height: 60,
@@ -46,7 +46,7 @@ const qualityFeatures = [
       'Energy-efficient processes, recyclable packaging initiatives, and responsible water management help us manufacture with a lower environmental footprint.',
   },
   {
-    icon: '/assets/Quality_image/6.png',
+    icon: '/assets/Quality_image/Hygienic_filling.jpg',
     alt: 'Hygienic Filling Systems',
     width: 60,
     height: 60,

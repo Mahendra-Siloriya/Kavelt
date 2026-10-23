@@ -3,6 +3,7 @@ import Presence from '../components/Presence';
 import Quality from '../components/Quality';
 import Footer from '../components/Footer';
 
+
 const products = [
   {
     name: 'Kavelt Water 200 ML',
@@ -36,7 +37,7 @@ const products = [
   },
 ];
 
-export default function Home() {
+export default function Home({ onEnquireClick }) {
   return (
     <main>
         
@@ -96,9 +97,15 @@ export default function Home() {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <span className="pack-size">({product.pack})</span>
-                  <a href="/order" className="enquire-btn">
-                    ENQUIRE
-                  </a>
+
+                    <button
+                      type="button"
+                      className="enquire-btn"
+                      onClick={onEnquireClick}
+                    >
+                      ENQUIRE
+                    </button>
+
                 </div>
               </article>
             ))}

@@ -4,7 +4,7 @@ const products = [
   '500 ML Bottle',
   '1 Liter Bottle',
   '2 Liter Bottle',
-  '6 Liter Bottle',
+  '5 Liter Bottle',
   '20 Liter Jar',
 ];
 
@@ -44,30 +44,43 @@ export default function Footer() {
         </div>
 
         <div className="footer-column">
+          <h3>Company Offices</h3>
+          <h5>Manufacturing By</h5>
+          <p>FSSAI Lic.No.:1425105000293</p>
+          <p>Address: 44/1/7 Lasudiya Parmar Sanwer Indore, Sawer,Indore, Madhya Pradesh,453771</p>
+          <h5>Market By</h5>
+          <p>FSSAI Lic.No.:21422850005685</p>
+          <p>Address: Bangali Square Indore (M.P) 452001</p>
+    
+        </div>
+
+        <div className="footer-column">
           <h3>Contact Us</h3>
           <p>Indore, Madhya Pradesh, India</p>
           <p >Phone: +91 7771063876</p>
           <p >Email: kavelt99@gmail.com</p>
           
-            <div className="footer-column">
-            <h3>Follow Us</h3>
-            <a
-                href="https://www.instagram.com/kavelt_india?srtk=MTFld3VueDRyZG0ybg=="
-                target="_blank"
-                rel="noreferrer"
-            >
-                Instagram ↗
+      <div className="footer-column social_link">
+        <h3>Follow Us</h3>
+        
+          <div className="social-icons-row">
+            <a href="https://www.instagram.com/kavelt_india?srtk=MTFld3VueDRyZG0ybg==" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-instagram"></i>
             </a>
 
-            <a
-                href="https://youtube.com/@kaveltindia?si=M3bCUtz0qkL6d_3n/"
-                target="_blank"
-                rel="noreferrer"
-            >
-                YouTube ↗
+            <a href="https://youtube.com/@kaveltindia?si=M3bCUtz0qkL6d_3n/" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-youtube"></i>
             </a>
-            </div>
 
+            <a href="https://x.com/officialkavelt" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kavelt-kavelt-35648443b/" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
         </div>
       </div>
 

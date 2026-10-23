@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Navbar onOrderClick={openOrder} />
-      <Home />
+      <Home onEnquireClick={openOrder} />
       <Marquee />
       <Footer />
 
