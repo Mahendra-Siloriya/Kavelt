@@ -45,10 +45,11 @@ export default function Footer() {
 
         <div className="footer-column">
           <h3>Company Offices</h3>
-          <h5>Manufacturing By</h5>
+          <h4>Manufacturing By: Nesh & Aditya <br /> Enterprices </h4>
+          
           <p>FSSAI Lic.No.:1425105000293</p>
           <p>Address: 44/1/7 Lasudiya Parmar Sanwer Indore, Sawer,Indore, Madhya Pradesh,453771</p>
-          <h5>Market By</h5>
+          <h4>Marketed By: Kavelt </h4>
           <p>FSSAI Lic.No.:21422850005685</p>
           <p>Address: Bangali Square Indore (M.P) 452001</p>
     
