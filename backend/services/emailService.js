@@ -23,7 +23,7 @@ async function sendOrderEmail(order) {
   }
 
   const { data, error } = await resend.emails.send({
-    from: 'onboarding@resend.dev',
+    from: 'Kavelt Orders <orders@kavelt.com>',
     to: process.env.RECEIVER_EMAIL,
     subject: `New Kavelt Order Enquiry from ${order.name}`,
     text: [
