@@ -3,27 +3,21 @@ require('dotenv').config();
 
 const app = require('./app');
 const connectDB = require('./config/db');
-const { transporter } = require('./services/emailService');
 
 const PORT = process.env.PORT || 5000;
 
 async function startServer() {
   try {
-    if (
-      !process.env.EMAIL_USER ||
-      !process.env.EMAIL_PASS ||
-      !process.env.RECEIVER_EMAIL
-    ) {
-      throw new Error('Email settings are missing from backend/.env');
+    if (!process.env.RESEND_API_KEY || !process.env.RECEIVER_EMAIL) {
+      throw new Error(
+        'RESEND_API_KEY or RECEIVER_EMAIL is missing from environment variables'
+      );
     }
 
     await connectDB();
-    await transporter.verify();
 
-    console.log('Email transporter verified successfully');
-
-    app.listen(PORT, () => {
-      console.log(`Backend running at http://localhost:${PORT}`);
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Kavelt backend is running on port ${PORT}`);
     });
   } catch (error) {
     console.error('Server startup failed:', error.message);

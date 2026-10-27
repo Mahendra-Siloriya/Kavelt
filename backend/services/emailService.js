@@ -1,13 +1,7 @@
 
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -20,8 +14,16 @@ function escapeHtml(value) {
 }
 
 async function sendOrderEmail(order) {
-  await transporter.sendMail({
-    from: process.env.EMAIL_USER,
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error('RESEND_API_KEY is missing from environment variables');
+  }
+
+  if (!process.env.RECEIVER_EMAIL) {
+    throw new Error('RECEIVER_EMAIL is missing from environment variables');
+  }
+
+  const { data, error } = await resend.emails.send({
+    from: 'onboarding@resend.dev',
     to: process.env.RECEIVER_EMAIL,
     subject: `New Kavelt Order Enquiry from ${order.name}`,
     text: [
@@ -45,6 +47,13 @@ async function sendOrderEmail(order) {
       <p><strong>Time:</strong> ${escapeHtml(order.createdAt.toLocaleString())}</p>
     `
   });
+
+  if (error) {
+    throw new Error(`Resend email failed: ${error.message}`);
+  }
+
+  console.log('Order email sent successfully:', data.id);
+  return data;
 }
 
-module.exports = { transporter, sendOrderEmail };
+module.exports = { sendOrderEmail };
